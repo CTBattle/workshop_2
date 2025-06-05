@@ -127,9 +127,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 if DEBUG:
-    staticfiles_dir = [os.path.json(BASE_DIR, "static")]
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 else:
-    static_root = [os.path.join(BASE_DIR, "static")]
+    STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 STATIC_URL = '/static/'
 
